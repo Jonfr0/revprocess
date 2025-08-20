@@ -18,14 +18,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Scale Your Brand Beyond 6-Figures | RevProcess",
-  description: "Discover how creators with tiny audiences are quietly making 10x more than their competitors using The Backend Secret. Ready to focus 100% on content?",
+  title: "RevProcess",
+  description: "RevProcess helps creators and brands scale with powerful backend systems.",
   keywords: "scale business, content creation, backend secret, revenue growth, creators",
   authors: [{ name: "RevProcess" }],
   robots: "index, follow",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/favicon.ico",
+    apple: "/images/logo.png",
+  },
   openGraph: {
-    title: "Scale Your Brand Beyond 6-Figures | RevProcess",
-    description: "Discover how creators with tiny audiences are quietly making 10x more than their competitors using The Backend Secret.",
+    title: "RevProcess",
+    description: "Scale your brand with RevProcess.",
     type: "website",
     locale: "en_US",
   },

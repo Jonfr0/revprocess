@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 interface CTAButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -9,13 +7,11 @@ interface CTAButtonProps {
 }
 
 export default function CTAButton({ children, onClick, className = '' }: CTAButtonProps) {
-  const [isHovered, setIsHovered] = useState(false);
-
   const handleClick = () => {
     if (onClick) {
       onClick();
     } else {
-      // Default action - could be a calendar booking link
+      // Replace with booking link when available
       console.log('CTA button clicked - redirect to booking');
     }
   };
@@ -23,17 +19,18 @@ export default function CTAButton({ children, onClick, className = '' }: CTAButt
   return (
     <button
       className={`
-        w-[248px] h-[60px] bg-white border-2 border-black rounded-lg
-        font-dm-sans font-black text-xl text-black
-        transition-all duration-300 transform
-        hover:bg-black hover:text-white hover:scale-105
-        active:scale-95
+        w-[200px] sm:w-[220px] md:w-[240px] lg:w-[248px]
+        h-[48px] sm:h-[52px] md:h-[56px] lg:h-[60px]
+        bg-white border-2 border-black rounded-none
+        font-dm-sans font-black text-base sm:text-lg lg:text-xl text-black
+        transition-colors duration-200
+        hover:bg-black hover:text-white
+        active:opacity-90
         focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2
         ${className}
       `}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
+      aria-label="Book Our Call"
     >
       <span className="flex items-center justify-center h-full">
         {children}
