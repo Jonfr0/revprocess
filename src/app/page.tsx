@@ -39,11 +39,24 @@ export default function Home() {
             <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8">
               <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 w-full">
                 <h1 className="font-inter font-bold max-[374px]:text-[32px] max-[420px]:text-[38px] max-[480px]:text-[40px] text-[44px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight text-foreground text-center">
-                  <span className="block">
-                    Scale Your Brand or Business Beyond 6-Figures Using
-                  </span>
+                  {/* Mobile: Split into two lines with "Using The" together */}
+                  <div className="block sm:hidden">
+                    <span className="block">
+                      Scale Your Brand or Business Beyond 6-Figures Using The
+                    </span>
+                    <span className="block font-extrabold italic" style={{backgroundImage: 'linear-gradient(90deg, #FDBC01 0%, #FFAE00 50%, #FFA300 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', color: 'transparent'}}>
+                      Backend Secret
+                    </span>
+                  </div>
+                  {/* Tablet and Desktop: Original single line structure */}
+                  <div className="hidden sm:block">
+                    <span className="block">
+                      Scale Your Brand or Business Beyond 6-Figures Using
+                    </span>
+                  </div>
                 </h1>
-                <div className="w-full flex justify-center items-center">
+                {/* Mobile: Hide the separate Backend Secret section */}
+                <div className="hidden sm:flex w-full justify-center items-center">
                   <div className="relative font-inter font-extrabold italic text-center">
                     {/* Shadow layer */}
                     <div className="absolute inset-0 text-black opacity-15" style={{transform: 'translate(0px, 4px)', filter: 'blur(4px)'}}>
@@ -96,12 +109,12 @@ export default function Home() {
 
             {/* Footer Links */}
             <nav aria-label="Footer" className="flex flex-col items-center gap-2">
-              <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-text-gray text-xs sm:text-sm leading-6">
-                <li className="inline-flex items-center h-6">© 2025 RevProcess</li>
-                <li className="inline-flex items-center h-6">All rights reserved</li>
-                <li className="inline-flex items-center h-6"><Link href="/privacy" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Privacy Policy</Link></li>
-                <li className="inline-flex items-center h-6"><Link href="/terms" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Terms of Service</Link></li>
-              </ul>
+                             <ul className="grid grid-cols-2 sm:grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-3 sm:gap-3 md:gap-x-6 gap-y-2 text-text-gray text-xs sm:text-sm leading-6 max-w-[470px] mx-auto">
+                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start">© 2025 RevProcess</li>
+                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start">All rights reserved</li>
+                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start"><Link href="/privacy" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Privacy Policy</Link></li>
+                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start"><Link href="/terms" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Terms of Service</Link></li>
+               </ul>
             </nav>
           </div>
         </div>
