@@ -61,7 +61,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="font-inter font-medium text-foreground text-center w-full max-w-[1074px] lg:text-[28px] md:text-[26px] sm:text-[22px] text-[18px] max-[374px]:text-[16px] leading-[1.25]">
-                Discover how creators with tiny audiences are quietly making 10x more than their competitors... while you're grinding 12-hour days for scraps.
+                Discover how creators with tiny audiences are quietly making 10x more than their competitors... while you&apos;re grinding 12-hour days for scraps.
               </p>
             </div>
           </div>

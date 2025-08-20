@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { IoSunnySharp } from "react-icons/io5";
-import { IoMoonSharp } from "react-icons/io5";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -70,7 +68,6 @@ export default function ThemeToggle() {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, [mounted]);
 
-  const isDark = theme === 'dark';
 
   // Prevent hydration mismatch by not rendering until mounted
   if (!mounted) {
