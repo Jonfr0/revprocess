@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: "/images/logo.png",
-    shortcut: "/favicon.ico",
+    shortcut: "/images/logo.png",
     apple: "/images/logo.png",
   },
   openGraph: {
