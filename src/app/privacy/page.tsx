@@ -102,7 +102,7 @@ export default function Privacy() {
               The right to request a copy of the data we hold about you.
             </p>
             <p className="font-inter text-foreground mb-4 leading-relaxed">
-              To exercise these rights, contact us at: jon@revprocess.com
+              To exercise these rights, contact me at: jon@revprocess.com
             </p>
           </section>
 
@@ -128,15 +128,12 @@ export default function Privacy() {
           </section>
 
           <section className="mb-8">
-            <h2 className="font-inter font-semibold text-2xl text-foreground mb-4">10. Contact Us</h2>
+            <h2 className="font-inter font-semibold text-2xl text-foreground mb-4">10. Contact Me</h2>
             <p className="font-inter text-foreground mb-4 leading-relaxed">
-              If you have questions about this Privacy Policy or how your information is handled, please contact us:
-            </p>
-            <p className="font-inter text-foreground mb-2 leading-relaxed">
-              RevProcess
+              If you have questions about this Privacy Policy or how your information is handled, please contact me:
             </p>
             <p className="font-inter text-foreground mb-4 leading-relaxed">
-              Email: jon@revprocess.com
+              Email: <strong>jon@revprocess.com</strong>
             </p>
           </section>
         </div>

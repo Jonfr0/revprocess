@@ -1,6 +1,8 @@
 import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
+import ThemeToggle from "@/components/ThemeToggle";
 import Link from "next/link";
+import CTAButton from "@/components/CTAButton";
 
 export default function Home() {
   return (
@@ -78,9 +80,7 @@ export default function Home() {
             <p className="font-inter font-semibold text-[20px] sm:text-[22px] md:text-[24px] text-foreground text-center">
               Ready to focus 100% on content?
             </p>
-            <button className="w-[248px] h-[60px] bg-white border-2 border-black rounded-none font-dm-sans font-[900] text-[20px] leading-[33.6px] text-black hover:bg-black hover:text-white transition-colors duration-200 flex items-center justify-center cursor-pointer">
-              Book Our Call
-            </button>
+            <CTAButton>Book Our Call</CTAButton>
           </div>
         </section>
       </main>
@@ -106,6 +106,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Theme Toggle */}
+      <ThemeToggle />
     </div>
   );
 }
