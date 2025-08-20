@@ -1,102 +1,106 @@
 import Image from "next/image";
+import VideoPlayer from "@/components/VideoPlayer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="min-h-screen bg-white">
+      {/* Main Content */}
+      <main className="w-full">
+        {/* Hero Section */}
+        <section className="w-full flex flex-col items-center self-stretch gap-[42px] py-6 md:py-10 mb-8 md:mb-12">
+          {/* Logo */}
+          <div className="relative h-[52px] w-[345px] md:h-[64px] md:w-[420px]">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/images/logo-6af508.png"
+              alt="REVPROCESS"
+              fill
+              className="object-contain"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+          </div>
+          
+          {/* Content Frame */}
+          <div className="flex flex-col items-center gap-[38px] w-full max-w-[1074px]">
+            {/* Headline Frame */}
+            <div className="flex flex-col items-center gap-[12px] h-[120px] md:h-[204px]">
+              {/* Main Headline */}
+              <div className="w-full max-w-[921px]">
+                <h1 className="font-inter font-bold text-[32px] sm:text-[48px] md:text-[64px] leading-[1.031] text-black text-center" style={{textShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)'}}>
+                  Scale Your Brand or Business 
+                  Beyond 6-Figures Using
+                </h1>
+              </div>
+              
+              {/* Backend Secret Frame */}
+              <div className="w-full max-w-[922px] flex justify-center items-center gap-[10px]">
+                <div className="relative w-full max-w-[750px]">
+                  {/* Shadow layer */}
+                  <div className="absolute font-inter font-extrabold italic text-[38px] sm:text-[54px] md:text-[68px] leading-[0.824] text-center text-black w-full" style={{transform: 'translate(0px, 4px)', filter: 'blur(4px)', opacity: 0.15}}>
+                    The Backend Secret
+                  </div>
+                  {/* Main gradient text */}
+                  <div className="relative font-inter font-extrabold italic text-[38px] sm:text-[54px] md:text-[68px] leading-[0.824] text-center bg-gradient-to-r from-[#FFB429] via-[#FFA600E6] to-[#FFC300] bg-clip-text text-transparent w-full">
+                    The Backend Secret
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Subheadline Frame */}
+            <div className="flex justify-stretch items-stretch self-stretch gap-[10px] w-full">
+              <p className="font-inter font-normal text-[20px] sm:text-[24px] md:text-[28px] leading-[1.214] text-black text-center w-full">
+                Discover how creators with tiny audiences are quietly making 10x more than their competitors... while you're grinding 12-hour days for scraps.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="mb-6 md:mb-8 px-4">
+          <div className="max-w-4xl mx-auto">
+            <VideoPlayer />
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-full flex justify-center py-6 md:py-8 mb-12 md:mb-16 px-4">
+          <div className="flex flex-col items-center gap-[18px] md:gap-[20px] w-full max-w-4xl">
+            <p className="font-inter font-semibold text-[20px] md:text-[22px] leading-[1.527] text-black text-center w-full">
+              Ready to focus 100% on content?
+            </p>
+            <button className="w-[240px] md:w-[248px] h-[56px] md:h-[60px] bg-white border-2 border-black rounded-none font-dm-sans font-black text-[18px] md:text-[20px] leading-[1.68] text-black hover:bg-black hover:text-white transition-colors duration-300 px-[40px] md:px-[50px] py-[8px] md:py-[9px]">
+              Book Our Call
+            </button>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="w-full bg-white py-6 md:py-8">
+        <div className="flex flex-col items-center gap-[12px] md:gap-[15px] w-full max-w-[1076px] mx-auto px-4">
+          {/* Separator Line */}
+          <div className="w-full h-[1px] bg-black"></div>
+          
+          {/* Footer Content */}
+          <div className="flex flex-col items-center self-stretch gap-[8px] md:gap-[9px] w-full">
+            {/* Disclaimer */}
+            <p className="font-inter text-[10px] md:text-[11px] leading-[1.222] text-black text-center w-full max-w-[600px] md:max-w-none">
+              This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way.
+            </p>
+            
+            {/* Footer Links */}
+            <div className="flex flex-wrap items-center justify-center gap-[12px] md:gap-[15px]">
+              <span className="font-inter text-[14px] md:text-base leading-[1.5] text-black text-center">© 2025 RevProcess</span>
+              <span className="font-inter text-[14px] md:text-base leading-[1.5] text-black text-center">All rights reserved</span>
+              <a href="/privacy" className="font-inter text-[14px] md:text-base leading-[1.5] text-black text-left hover:text-gray-600 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="font-inter text-[14px] md:text-base leading-[1.5] text-black text-left hover:text-gray-600 transition-colors">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );

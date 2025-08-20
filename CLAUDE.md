@@ -1,0 +1,1 @@
+please follow the one-shot lander design prompt at @vsl-desing.md
