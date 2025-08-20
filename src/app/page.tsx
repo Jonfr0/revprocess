@@ -1,21 +1,31 @@
 import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header Section */}
-      <header className="w-full bg-white pt-6 pb-4 sm:pb-5 md:pb-6 lg:pb-[18px]">
-        <div className="mx-auto px-4 flex justify-center">
-          <div className="relative h-[72px] sm:h-[84px] md:h-[92px] w-[220px] sm:w-[280px] md:w-[320px] lg:w-[344px]">
-            <Image
-              src="/images/logo-6af508.png"
-              alt="REVPROCESS"
-              fill
-              className="object-contain"
-              priority
-            />
+      <header className="w-full bg-background pt-6 pb-4 sm:pb-5 md:pb-6 lg:pb-[18px]">
+        <div className="mx-auto px-4">
+          <div className="flex justify-center">
+            <div className="relative h-[72px] sm:h-[84px] md:h-[92px] w-[220px] sm:w-[280px] md:w-[320px] lg:w-[344px]">
+              <Image
+                src="/images/logo-6af508.png"
+                alt="REVPROCESS"
+                fill
+                className="object-contain logo-light"
+                priority
+              />
+              <Image
+                src="/images/logo-6af509.png"
+                alt="REVPROCESS"
+                fill
+                className="object-contain logo-dark"
+                priority
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -27,7 +37,7 @@ export default function Home() {
           <div className="w-full flex justify-center">
             <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8">
               <div className="flex flex-col items-center justify-center gap-2 sm:gap-3 w-full">
-                <h1 className="font-inter font-bold max-[374px]:text-[32px] max-[420px]:text-[38px] max-[480px]:text-[40px] text-[44px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight text-black text-center">
+                <h1 className="font-inter font-bold max-[374px]:text-[32px] max-[420px]:text-[38px] max-[480px]:text-[40px] text-[44px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-tight text-foreground text-center">
                   <span className="block">
                     Scale Your Brand or Business Beyond 6-Figures Using
                   </span>
@@ -49,7 +59,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <p className="font-inter font-medium text-black text-center w-full max-w-[1074px] lg:text-[28px] md:text-[26px] sm:text-[22px] text-[18px] max-[374px]:text-[16px] leading-[1.25]">
+              <p className="font-inter font-medium text-foreground text-center w-full max-w-[1074px] lg:text-[28px] md:text-[26px] sm:text-[22px] text-[18px] max-[374px]:text-[16px] leading-[1.25]">
                 Discover how creators with tiny audiences are quietly making 10x more than their competitors... while you're grinding 12-hour days for scraps.
               </p>
             </div>
@@ -66,10 +76,10 @@ export default function Home() {
         {/* CTA Section */}
         <section className="flex justify-center pb-14 sm:pb-16 md:pb-16 lg:pb-20">
           <div className="flex flex-col items-center gap-4 sm:gap-5 w-full">
-            <p className="font-inter font-medium text-[18px] sm:text-[20px] md:text-[22px] text-black text-center">
+            <p className="font-inter font-semibold text-[20px] sm:text-[22px] md:text-[24px] text-foreground text-center">
               Ready to focus 100% on content?
             </p>
-            <button className="w-[248px] h-[60px] bg-white border-2 border-black rounded-none font-dm-sans font-[900] text-[20px] leading-[33.6px] text-black hover:bg-black hover:text-white transition-colors duration-200 flex items-center justify-center">
+            <button className="w-[248px] h-[60px] bg-black text-white border-2 border-white rounded-none font-dm-sans font-[900] text-[20px] leading-[33.6px] hover:bg-white hover:text-black hover:border-black transition-colors duration-200 flex items-center justify-center cursor-pointer">
               Book Our Call
             </button>
           </div>
@@ -77,7 +87,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-white border-t border-border-gray py-6 sm:py-8">
+      <footer className="w-full bg-background border-t border-border-gray py-6 sm:py-8">
         <div className="mx-auto px-4 max-w-5xl">
           <div className="text-center space-y-3 sm:space-y-4">
             {/* Disclaimer */}
@@ -93,6 +103,9 @@ export default function Home() {
                 <li className="inline-flex items-center h-6"><Link href="/privacy" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:text-black transition-colors">Privacy Policy</Link></li>
                 <li className="inline-flex items-center h-6"><Link href="/terms" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:text-black transition-colors">Terms of Service</Link></li>
               </ul>
+              <div className="mt-3">
+                <ThemeToggle />
+              </div>
             </nav>
           </div>
         </div>

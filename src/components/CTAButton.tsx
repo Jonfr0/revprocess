@@ -21,12 +21,13 @@ export default function CTAButton({ children, onClick, className = '' }: CTAButt
       className={`
         w-[200px] sm:w-[220px] md:w-[240px] lg:w-[248px]
         h-[48px] sm:h-[52px] md:h-[56px] lg:h-[60px]
-        bg-white border-2 border-black rounded-none
-        font-dm-sans font-black text-base sm:text-lg lg:text-xl text-black
+        bg-black text-white border-2 border-white rounded-none
+        font-dm-sans font-black text-base sm:text-lg lg:text-xl dark:text-foreground
         transition-colors duration-200
-        hover:bg-black hover:text-white
+        hover:bg-white hover:text-black hover:border-black dark:hover:bg-white dark:hover:text-black
         active:opacity-90
         focus:outline-none focus:ring-2 focus:ring-brand-orange focus:ring-offset-2
+        cursor-pointer
         ${className}
       `}
       onClick={handleClick}
