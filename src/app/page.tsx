@@ -1,11 +1,10 @@
 import Image from "next/image";
 import VideoPlayer from "@/components/VideoPlayer";
 import Link from "next/link";
-import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative">
       {/* Header Section */}
       <header className="w-full bg-background pt-6 pb-4 sm:pb-5 md:pb-6 lg:pb-[18px]">
         <div className="mx-auto px-4">
@@ -79,7 +78,7 @@ export default function Home() {
             <p className="font-inter font-semibold text-[20px] sm:text-[22px] md:text-[24px] text-foreground text-center">
               Ready to focus 100% on content?
             </p>
-            <button className="w-[248px] h-[60px] bg-black text-white border-2 border-white rounded-none font-dm-sans font-[900] text-[20px] leading-[33.6px] hover:bg-white hover:text-black hover:border-black transition-colors duration-200 flex items-center justify-center cursor-pointer">
+            <button className="w-[248px] h-[60px] bg-white border-2 border-black rounded-none font-dm-sans font-[900] text-[20px] leading-[33.6px] text-black hover:bg-black hover:text-white transition-colors duration-200 flex items-center justify-center cursor-pointer">
               Book Our Call
             </button>
           </div>
@@ -100,12 +99,9 @@ export default function Home() {
               <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-text-gray text-xs sm:text-sm leading-6">
                 <li className="inline-flex items-center h-6">© 2025 RevProcess</li>
                 <li className="inline-flex items-center h-6">All rights reserved</li>
-                <li className="inline-flex items-center h-6"><Link href="/privacy" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:text-black transition-colors">Privacy Policy</Link></li>
-                <li className="inline-flex items-center h-6"><Link href="/terms" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:text-black transition-colors">Terms of Service</Link></li>
+                <li className="inline-flex items-center h-6"><Link href="/privacy" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Privacy Policy</Link></li>
+                <li className="inline-flex items-center h-6"><Link href="/terms" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Terms of Service</Link></li>
               </ul>
-              <div className="mt-3">
-                <ThemeToggle />
-              </div>
             </nav>
           </div>
         </div>
