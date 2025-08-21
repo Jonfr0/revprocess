@@ -107,15 +107,17 @@ export default function Home() {
               This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way.
             </p>
 
-            {/* Footer Links */}
-            <nav aria-label="Footer" className="flex flex-col items-center gap-2">
-                             <ul className="grid grid-cols-2 sm:grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-3 sm:gap-3 md:gap-x-6 gap-y-2 text-text-gray text-xs sm:text-sm leading-6 max-w-[470px] mx-auto">
-                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start">© 2025 RevProcess</li>
-                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start">All rights reserved</li>
-                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start"><Link href="/privacy" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Privacy Policy</Link></li>
-                 <li className="inline-flex items-center h-6 justify-center sm:justify-center md:justify-start"><Link href="/terms" className="inline-flex items-center h-6 min-h-0 min-w-0 hover:underline">Terms of Service</Link></li>
-               </ul>
-            </nav>
+                          {/* Footer Links */}
+              <nav aria-label="Footer" className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-text-gray text-xs sm:text-sm leading-6">
+                <ul className="flex items-center gap-4">
+                  <li>© 2025 RevProcess</li>
+                  <li>All rights reserved</li>
+                </ul>
+                <ul className="flex items-center gap-4">
+                  <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
+                  <li><Link href="/terms" className="hover:underline">Terms of Service</Link></li>
+                </ul>
+              </nav>
           </div>
         </div>
       </footer>
