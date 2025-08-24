@@ -18,6 +18,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://revprocess.com'),
   title: {
     default: "RevProcess",
     template: "%s | RevProcess"

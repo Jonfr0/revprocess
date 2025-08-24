@@ -14,11 +14,6 @@ const nextConfig: NextConfig = {
   // Enable modern React features
   reactStrictMode: true,
   
-  // Enable SWC minification for better performance
-  swcMinify: true,
-  
-  // Optimize fonts
-  optimizeFonts: true,
   
   // Security headers
   async headers() {

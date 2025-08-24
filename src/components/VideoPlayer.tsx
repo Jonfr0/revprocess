@@ -21,7 +21,7 @@ export default function VideoPlayer({ className = '' }: VideoPlayerProps) {
             padding-top: 56.25%; 
           }
         `}</style>
-        {/* @ts-ignore: Custom element from Wistia */}
+        {/* @ts-expect-error: Custom element from Wistia */}
         <wistia-player media-id="7l1vax6fpp" aspect="1.7777777777777777"></wistia-player>
       </div>
     </>

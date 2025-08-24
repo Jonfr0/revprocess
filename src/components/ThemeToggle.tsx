@@ -3,8 +3,18 @@
 import { useEffect, useState } from 'react';
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [mounted, setMounted] = useState(false);
+
+  // Function to apply theme
+  const applyTheme = (theme: 'light' | 'dark') => {
+    const root = document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -21,19 +31,6 @@ export default function ThemeToggle() {
       // Light mode: 6 AM - 8 PM (6:00 - 19:59)
       // Dark mode: 8 PM - 6 AM (20:00 - 5:59)
       return (hour >= 6 && hour < 20) ? 'light' : 'dark';
-    };
-
-    // Function to apply theme
-    const applyTheme = (theme: 'light' | 'dark') => {
-      const root = document.documentElement;
-      if (theme === 'dark') {
-        root.classList.add('dark');
-      } else {
-        root.classList.remove('dark');
-      }
-      // Update local state
-      setTheme(theme);
-      localStorage.setItem('theme', theme);
     };
 
     // Initial theme application based on time
@@ -60,7 +57,7 @@ export default function ThemeToggle() {
     const handleChange = (e: MediaQueryListEvent) => {
       const newTheme = e.matches ? 'dark' : 'light';
       if (!localStorage.getItem('theme')) { // Only auto-update if user hasn't manually set a preference
-        setTheme(newTheme);
+        applyTheme(newTheme);
       }
     };
 
