@@ -35,8 +35,8 @@ export default function CTAButton({ children, onClick, className = '' }: CTAButt
     if (onClick) {
       onClick();
     } else {
-      // Replace with booking link when available
-      console.log('CTA button clicked - redirect to booking');
+      // Redirect to Cal.com booking page
+      window.open('https://cal.com/jonfroemming/30min', '_blank', 'noopener,noreferrer');
     }
   };
 

@@ -18,21 +18,59 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "RevProcess",
-  description: "RevProcess helps creators and brands scale with powerful backend systems.",
-  keywords: "scale business, content creation, backend secret, revenue growth, creators",
-  authors: [{ name: "RevProcess" }],
-  robots: "index, follow",
+  title: {
+    default: "RevProcess",
+    template: "%s | RevProcess"
+  },
+  description: "Scale Your Brand Beyond 6-Figures Using The Backend Secret. Discover how creators with tiny audiences are quietly making 10x more than their competitors while you're grinding 12-hour days for scraps.",
+  keywords: ["scale business", "content creation", "backend secret", "revenue growth", "growth operator", "AI Operator", "business scaling", "Info Publishing", "Info Product Agency"],
+  authors: [{ name: "RevProcess", url: "https://revprocess.com" }],
+  creator: "RevProcess",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
-    icon: "/images/logo.png",
+    icon: [
+      { url: "/images/logo.png", sizes: "32x32", type: "image/png" },
+    ],
     shortcut: "/images/logo.png",
     apple: "/images/logo.png",
   },
   openGraph: {
-    title: "RevProcess",
-    description: "Scale your brand with RevProcess.",
+    title: "RevProcess - Scale Your Brand Beyond 6-Figures Using The Backend Secret",
+    description: "Discover how creators with tiny audiences are quietly making 10x more than their competitors.",
     type: "website",
     locale: "en_US",
+    url: "https://revprocess.com",
+    siteName: "RevProcess",
+    images: [
+      {
+        url: "/images/logo-6af508.png",
+        width: 1200,
+        height: 630,
+        alt: "RevProcess - Scale Your Brand Beyond 6-Figures",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RevProcess - Scale Your Brand Beyond 6-Figures",
+    description: "Discover how creators with tiny audiences are quietly making 10x more than their competitors.",
+    images: ["/images/logo-6af508.png"],
+  },
+  alternates: {
+    canonical: "https://revprocess.com",
+  },
+  verification: {
+    google: "your-google-site-verification-code",
   },
 };
 

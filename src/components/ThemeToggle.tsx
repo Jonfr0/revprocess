@@ -80,27 +80,7 @@ export default function ThemeToggle() {
     );
   }
 
-  // return (
-  //   <div className="hidden sm:block">
-  //     <button
-  //       type="button"
-  //       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-  //       className={`w-12 h-12 rounded-full shadow-lg transition-all duration-200 flex items-center justify-center hover:scale-105 ${
-  //         isDark 
-  //           ? 'bg-background/80 border border-border-gray text-brand-orange hover:bg-background/50' 
-  //           : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
-  //       }`}
-  //       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-  //       style={{ visibility: 'hidden' }} // Make button invisible but keep functionality
-  //     >
-  //       {isDark ? (
-  //         <IoSunnySharp size={24} />
-  //       ) : (
-  //         <IoMoonSharp size={24} />
-  //       )}
-  //     </button>
-  //   </div>
-  // );
+  return null;
 }
 
 

@@ -82,9 +82,7 @@ export default function Home() {
 
         {/* Video Section */}
         <section className="mb-10 sm:mb-12 md:mb-14 lg:mb-16">
-          <div className="max-w-[1120px] mx-auto w-full">
-            <VideoPlayer />
-          </div>
+          <VideoPlayer />
         </section>
 
         {/* CTA Section */}
